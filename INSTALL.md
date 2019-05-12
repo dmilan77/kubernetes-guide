@@ -1,17 +1,22 @@
 ### Install Kubernetes cluster:
 
 ### 1 Master + 2 Worker Nodes
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.6 LTS
+Release:	16.04
+Codename:	xenial
 
 ### All Nodes
 ### ---------
 ### Get the Docker gpg key:
+
 `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 
 ### Add the Docker repository
 `sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
 
 ### Get the Kubernetes gpg key
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+`curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -`
 
 ### Add the Kubernetes repository
 ```
