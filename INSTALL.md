@@ -1,6 +1,6 @@
-# Install Kubernetes cluster:
+### Install Kubernetes cluster:
 
-# 1 Master + 2 Worker Nodes
+### 1 Master + 2 Worker Nodes
 
 # All Nodes
 # ---------
