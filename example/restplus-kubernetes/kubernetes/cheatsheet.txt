@@ -1,0 +1,2 @@
+# command to run using busybox/alpine
+kubectl exec -it alpine -- curl restplus-kubernetes-service/hostname

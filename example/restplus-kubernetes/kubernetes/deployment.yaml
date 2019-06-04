@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restplus-kubernetesapi
+  labels:
+    app: restplus-kubernetes
+spec:
+  selector:
+    matchLabels:
+      app: restplus-kubernetes
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: restplus-kubernetes
+        tier: web
+    spec:
+      containers:
+      - name: restplus-kubernetes
+        image: restplus-kubernetes:latest
+        # comment the line imagePullPolicy if needed to pull from registry
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
