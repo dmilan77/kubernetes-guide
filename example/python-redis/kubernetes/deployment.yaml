@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-redis
+  namespace: my-namespace
+  labels:
+    app: python-redis
+spec:
+  selector:
+    matchLabels:
+      app: python-redis
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: python-redis
+        tier: web
+    spec:
+      containers:
+      - name: python-redis
+        image: python-redis:latest
+        # comment the line imagePullPolicy if needed to pull from registry
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
